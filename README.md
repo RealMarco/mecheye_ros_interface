@@ -1,7 +1,12 @@
-# Mech-Eye ROS Interface
+# Mech-Eye ROS Interface with the newest instrcutions
 
 This repository contains the official ROS interface for Mech-Eye camera.
 
+## References
+1. Mech-Eye UserMannual: https://docs.mech-mind.net/2.1/en-GB/MechEye/QuickStart/InstallationGuide.html
+2. Calibration: https://downloads.mech-mind.com/?tab=tab-calibration-boards
+3. Resource Download: https://downloads.mech-mind.com/?tab=tab-suite, https://downloads.mech-mind.com.cn/?tab=tab-history
+4. Set IP Address using HALCON on windows: https://docs.mech-mind.net/2.1/en-GB/MechEye/Genicam/Halcon/ConfigureCameraIpAddress.html
 ## Installation
 
 ### Dependencies
@@ -20,7 +25,15 @@ This API supports Ubuntu 18.04 with [ROS Melodic](http://wiki.ros.org/melodic/In
 
 ### Install Mech-Eye SDK
 
-Download and install MechEyeApi_1.6.0 compatible with Ubuntu from this [link](https://www.mech-mind.com/download/camera-sdk.html).
+- Download and install MechEyeApi_1.6.0 compatible with Ubuntu from this [link](https://community.mech-mind.com/c/latest-product-downloads/10). Or
+```
+$ wget https://cdn-obj.azureedge.net/community/community_downloads/Mech-Eye%20SDK(2.1.0)/Mech-Eye%20SDK%202.1.0%20Renamed/Mech-Eye_API_2.1.0_AMD64_Debian&Ubuntu.deb
+$ sudo dpkg -i MechEyeApi_x.x.x_amd64.deb
+$ dpkg -l | grep mecheyeapi
+Uninstall SDK $ sudo dpkg -P MechEyeApi
+```
+-  $ pip3 install MechEyeAPI
+
 
 ### Install the Interace
 

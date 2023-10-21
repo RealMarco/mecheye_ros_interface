@@ -76,18 +76,18 @@ namespace mecheye_ros_interface
 
         // Uncomment the following lines to connect a camera with ip inside .launch file
 
-        // mmind::api::ErrorStatus status;
-        // mmind::api::MechEyeDeviceInfo info;
-        // info.firmwareVersion = "1.6.0";
-        // info.ipAddress = camera_ip;
-        // info.port = 5577;
-        // status = device.connect(info);
-        // if (!status.isOK())
-        // {
-        //     showError(status);
-        //     return;
-        // }
-        // std::cout << "Connected to the Mech-Eye device successfully." << std::endl;
+        mmind::api::ErrorStatus status;
+        mmind::api::MechEyeDeviceInfo info;
+        info.firmwareVersion = "2.1.0";
+        info.ipAddress = camera_ip;
+        info.port = 5577;
+        status = device.connect(info);
+        if (!status.isOK())
+        {
+            showError(status);
+            return;
+        }
+        std::cout << "Connected to the Mech-Eye device successfully." << std::endl;
 
         mmind::api::MechEyeDeviceInfo deviceInfo;
         showError(device.getDeviceInfo(deviceInfo));
